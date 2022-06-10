@@ -1,8 +1,6 @@
 
----
+<p align="center"><img width="260px" src="https://chaz6chez.cn/images/workbunny-logo.png" alt="workbunny"></p>
 
-<img style="display: block;margin: 0 auto;" width="260px" src="https://chaz6chez.cn/images/workbunny-logo.png" alt="workbunny">
+**<p align="center">workbunny/storage</p>**
 
-## <center>workbunny/storage</center>
-
-**<center>🐇 A lightweight storage for PHP based on sqlite3 🐇</center>**
+**<p align="center">🐇 A lightweight storage for PHP based on sqlite3 🐇</p>**
