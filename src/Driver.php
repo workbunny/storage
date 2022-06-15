@@ -9,7 +9,7 @@ use SQLite3Result;
 use Throwable;
 use WorkBunny\Storage\Exceptions\StorageException;
 
-final class Driver
+class Driver
 {
     /** @see gettype() @var array 类型映射 */
     protected array $_typeMap = [
@@ -379,7 +379,7 @@ final class Driver
     /**
      * @param callable $actions
      * @return void
-     * @throws Throwable
+     * @throws StorageException
      */
     public function action(callable $actions): void
     {
@@ -392,7 +392,7 @@ final class Driver
             }
         } catch (Throwable $e) {
             $this->rollback();
-            throw $e;
+            throw new StorageException($e->getMessage(), $e->getCode(), $e);
         }
     }
 
@@ -458,14 +458,19 @@ final class Driver
     }
 
     /**
+     * @param bool $expend
      * @return array = [ (string|null) LAST_SQL, (float) LAST_DURATION ]
      */
-    public function last(): array
+    public function last(bool $expend = false): array
     {
-        return [$this->_lastSQL, $this->_lastDuration];
+        return [
+            $expend ? $this->generate($this->_lastSQL, $this->_lastMap) : $this->_lastSQL,
+            $this->_lastDuration
+        ];
     }
 
     /**
+     * @todo 大字符串的执行效率比较低
      * @param string $statement
      * @param array $map
      * @return string
