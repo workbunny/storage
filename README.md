@@ -157,8 +157,6 @@ $client->rollback();
 $client->commit();
 
 # 事务执行
-
-# 一次插入多条
 $client->action(function () {
     $client->insert('account', [
         'id' => 1,
