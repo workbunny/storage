@@ -122,7 +122,9 @@ class Driver
     /** 关闭连接 */
     public function close()
     {
-        $this->_driver->close();
+        if($this->_driver instanceof SQLite3){
+            $this->_driver->close();
+        }
         $this->_driver = null;
     }
 
@@ -145,6 +147,7 @@ class Driver
     }
 
     /**
+     * 执行
      * @param string $statement
      * @return bool
      * @throws StorageException
@@ -174,6 +177,7 @@ class Driver
     }
 
     /**
+     * query执行
      * @param string $statement
      * @param array $map
      * @return SQLite3Result|null
@@ -204,6 +208,7 @@ class Driver
     }
 
     /**
+     * 预处理执行
      * @param string $statement
      * @param array $map
      * @return SQLite3Result|null
@@ -319,7 +324,7 @@ class Driver
             }
         }
 
-        $command = "CREATE TABLE IF NOT EXISTS {$tableName} (" . implode(', ', $stack) . ');';
+        $command = "CREATE TABLE IF NOT EXISTS {$tableName} (" . implode(',', $stack) . ');';
         foreach ($indexSQLs as $indexSQL){
             $command .= $indexSQL;
         }
