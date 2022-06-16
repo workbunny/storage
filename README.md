@@ -77,12 +77,10 @@ $client->create('account', [
         'INT',
         'PRIMARY KEY',
         'NOT NULL',
-        'AUTOINCREMENT'
     ],
     'name' => [
         'VARCHAR(25)',
         'NOT NULL',
-        'UNIQUE'
     ],
 ]);
 ```
@@ -99,12 +97,10 @@ $client->create('account', [
         'INT',
         'PRIMARY KEY',
         'NOT NULL',
-        'AUTOINCREMENT'
     ],
     'name' => [
         'VARCHAR(25)',
         'NOT NULL',
-        'UNIQUE'
     ],
 ],[
     'CREATE INDEX `account_name` ON `account` (`name`);'
