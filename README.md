@@ -5,6 +5,8 @@
 
 **<p align='center'>🐇 A lightweight storage for PHP based on sqlite3 🐇</p>**
 
+[![Latest Stable Version](http://poser.pugx.org/workbunny/storage/v)](https://packagist.org/packages/workbunny/storage) [![Total Downloads](http://poser.pugx.org/workbunny/storage/downloads)](https://packagist.org/packages/workbunny/storage) [![Latest Unstable Version](http://poser.pugx.org/workbunny/storage/v/unstable)](https://packagist.org/packages/workbunny/storage) [![License](http://poser.pugx.org/workbunny/storage/license)](https://packagist.org/packages/workbunny/storage) [![PHP Version Require](http://poser.pugx.org/workbunny/storage/require/php)](https://packagist.org/packages/workbunny/storage)
+
 # 说明
 
 - 创建连接
