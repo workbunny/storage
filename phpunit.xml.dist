@@ -8,7 +8,7 @@
          colors="true"
          convertDeprecationsToExceptions="true">
     <testsuites>
-        <testsuite name="stroage test suite">
+        <testsuite name="storage test suite">
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>

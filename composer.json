@@ -43,5 +43,8 @@
     "files": [
       "./src/dev.php"
     ]
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit tests"
   }
 }
