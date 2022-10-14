@@ -10,10 +10,10 @@
         <img src="https://github.com/workbunny/storage/actions/workflows/CI.yml/badge.svg" alt="Build Status">
     </a>
     <a href="https://github.com/workbunny/storage/blob/main/composer.json">
-        <img alt="PHP Version Require" src="http://poser.pugx.org/workbunny/storage/require/php">
+        <img alt="PHP Version Require" src="https://badgen.net/packagist/php/workbunny/storage">
     </a>
     <a href="https://github.com/workbunny/storage/blob/main/LICENSE">
-        <img alt="GitHub license" src="http://poser.pugx.org/workbunny/storage/license">
+        <img alt="GitHub license" src="https://badgen.net/packagist/license/workbunny/storage">
     </a>
 
 </div>
